@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\FactoryAbstract.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\FactoryAbstract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\FactoryAbstract.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\FactoryAbstract.AssemblyInfo.cs
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\FactoryAbstract.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\bin\Debug\net6.0\FactoryAbstract.exe
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\bin\Debug\net6.0\FactoryAbstract.deps.json
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\bin\Debug\net6.0\FactoryAbstract.runtimeconfig.json
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\bin\Debug\net6.0\FactoryAbstract.dll
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\bin\Debug\net6.0\FactoryAbstract.pdb
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\FactoryAbstract.dll
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\refint\FactoryAbstract.dll
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\FactoryAbstract.pdb
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\FactoryAbstract.genruntimeconfig.cache
+C:\Users\User\source\repos\FactoryAbstract\FactoryAbstract\obj\Debug\net6.0\ref\FactoryAbstract.dll
