@@ -7,45 +7,28 @@ using System.Threading.Tasks;
 
 namespace FactoryAbstract.ConcreteProducts
 {
-    internal class EngineEletric: IEngine
+    internal class EngineEletricCar: IEngineEletric
     {
-        private TypesOfEngine _engineType;
         private double _potenciaTotal;
         private double _volumeTotal;
         public bool ligado { get; set; } = false;
-        public TypesOfEngine EngineType { get; set; }
         public int numBobina { get; set; }
         public double voltagemPorBobina { get; set; }
         public double resistenciaPorBobina { get; set; }
-        public int numCilindros { get { return numCilindros; }  set { numCilindros = value; } }
-        public double volumePorCilindro { get; set; }
-        public double potenciaPorCilindro { get; set; }
         public double potenciaTotal
         {
             get { return _potenciaTotal; }
             private set
             {
-                if (_engineType == TypesOfEngine.Eletric)
-                {
-                    _potenciaTotal = (((double)Math.Pow(voltagemPorBobina, 2)) * numBobina) * 0.9 / resistenciaPorBobina;
-                }
-                else if (_engineType == TypesOfEngine.Comnbustion)
-                {
-                    _potenciaTotal = numCilindros * potenciaPorCilindro * 0.85;
-                }
-                else
-                {
-                    _potenciaTotal = 0;
-                }
+               _potenciaTotal = (((double)Math.Pow(voltagemPorBobina, 2)) * numBobina) * 0.9 / resistenciaPorBobina;
             }
         }
         public double volumeTotal { get { return _volumeTotal; } private set { _volumeTotal = value; } }
         public double rotacaoMaxima { get; set; }
         public double rotacao { get; set; } = 0;
         public double consumo { get; set; }
-        public EngineEletric(double voltagemPorBobina, double resistenciaPorBobina, int numBobina)
+        public EngineEletricCar(double voltagemPorBobina, double resistenciaPorBobina, int numBobina)
         {
-            EngineType = TypesOfEngine.Eletric;
             this.numBobina = numBobina;
             this.resistenciaPorBobina = resistenciaPorBobina;
             this.voltagemPorBobina = voltagemPorBobina;
@@ -79,7 +62,7 @@ namespace FactoryAbstract.ConcreteProducts
         {
             throw new NotImplementedException();
         }
-        void Acelerar(double Rotacao)
+        public void Acelerar(double Rotacao)
         {
             if (rotacao != null)
             {

@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace FactoryAbstract.ConcreteFactory
 {
-    internal class CombustionFactory : IAbstractFactory
+    internal class FactoryEngineCar : IAbstractFactory
     {
-        public IEngine createEngine()
+        public IEngineCombustion createEngineCombustion()
         {
-            return new EngineCombustion(4,250.00,50.00);
+            return new EngineCombustionCar(5, 250.00, 40.00);
         }
 
-        public IEngineAirPlane createEngineAirPlane()
+        public IEngineCompression createEngineCompression()
         {
             throw new NotImplementedException();
         }
 
-        public IEngineShip createEngineShip()
+        public IEngineEletric createEngineEletric()
         {
             throw new NotImplementedException();
         }

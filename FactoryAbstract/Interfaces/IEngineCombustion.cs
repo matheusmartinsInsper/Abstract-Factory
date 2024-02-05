@@ -6,22 +6,19 @@ using System.Threading.Tasks;
 
 namespace FactoryAbstract.Interfaces
 {
-    internal interface IEngine
+    internal interface IEngineCombustion
     {
         bool ligado { get; set; }
-        TypesOfEngine EngineType { get; protected set; }
-        int numBobina { get; set; }
-        double voltagemPorBobina { get; set; }
-        double resistenciaPorBobina { get; set; }
         int numCilindros { get; set; }
         double volumePorCilindro { get; set; }
         double potenciaPorCilindro { get; set; }
         double potenciaTotal { get; }
         double volumeTotal { get; }
-        double rotacao { get; }
+        double rotacao { get; set; }
         double rotacaoMaxima { get; }
         double consumo { get; }
         public void Acionar();
         public void Desligar();
+        public void Acelerar(double rotacao);
     }
 }

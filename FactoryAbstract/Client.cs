@@ -12,8 +12,8 @@ namespace FactoryAbstract
     {
         public void Main () 
         {
-            IAbstractFactory factory1 = new CombustionFactory();
-            IEngine engeni1 = factory1.createEngine();
+            IAbstractFactory factory1 = new FactoryEngineCar();
+            IEngineCombustion engeni1 = factory1.createEngineCombustion();
             engeni1.Acionar();
         }
     }

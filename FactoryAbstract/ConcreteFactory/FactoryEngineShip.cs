@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace FactoryAbstract.ConcreteFactory
 {
-    internal class NuclearFactory : IAbstractFactory
+    internal class FactoryEngineShip : IAbstractFactory
     {
-        public IEngine createEngine()
+        public IEngineCombustion createEngineCombustion()
         {
             throw new NotImplementedException();
         }
 
-        public IEngineAirPlane createEngineAirPlane()
+        public IEngineCompression createEngineCompression()
         {
             throw new NotImplementedException();
         }
 
-        public IEngineShip createEngineShip()
+        public IEngineEletric createEngineEletric()
         {
             throw new NotImplementedException();
         }

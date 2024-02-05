@@ -8,8 +8,8 @@ namespace FactoryAbstract.Interfaces
 {
     internal interface IAbstractFactory
     {
-        public IEngine createEngine();
-        public IEngineAirPlane createEngineAirPlane();
-        public IEngineShip createEngineShip();
+        public IEngineCombustion createEngineCombustion();
+        public IEngineEletric createEngineEletric();
+        public IEngineCompression createEngineCompression();
     }
 }

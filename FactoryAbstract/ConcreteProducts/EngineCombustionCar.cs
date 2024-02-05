@@ -8,16 +8,12 @@ using System.Threading.Tasks;
 
 namespace FactoryAbstract.ConcreteProducts
 {
-    internal class EngineCombustion : IEngine
+    internal class EngineCombustionCar : IEngineCombustion
     {
-        private TypesOfEngine _engineType;
         private double _potenciaTotal;
         private double _volumeTotal;
+        private double _consumo;
         public bool ligado { get; set; } = false;
-        public TypesOfEngine EngineType { get { return _engineType; } set { _engineType = value; } }
-        public int numBobina { get; set; }
-        public double voltagemPorBobina { get; set; }
-        public double resistenciaPorBobina { get; set; }
         public int numCilindros { get; set; }
         public double volumePorCilindro { get; set; }
         public double potenciaPorCilindro { get; set; }
@@ -25,25 +21,28 @@ namespace FactoryAbstract.ConcreteProducts
             get { return _potenciaTotal;}
             private set
             {
-                if (_engineType == TypesOfEngine.Eletric)
-                {
-                    _potenciaTotal = (((double)Math.Pow(voltagemPorBobina, 2)) * numBobina)*0.9/ resistenciaPorBobina;
-                }else if(_engineType == TypesOfEngine.Comnbustion)
-                {
                     _potenciaTotal = numCilindros * potenciaPorCilindro*0.85;
-                }else
-                {
-                    _potenciaTotal = 0;
-                }
             }
         }
         public double volumeTotal { get { return _volumeTotal; } private set { _volumeTotal = value; } }
         public double rotacaoMaxima { get; set; }
         public double rotacao { get; set; } = 0;
-        public double consumo { get; set; }
-        public EngineCombustion(int numCilindros,double volumePorCilindro,double potenciaPorCilindro)
+        public double consumo { 
+            get { return _consumo; }  
+            private set 
+            {
+                if (_potenciaTotal <= 120)
+                {
+                    _consumo = _potenciaTotal * 0.1;
+                }else if(_potenciaTotal <= 300)
+                {
+                    _consumo = _potenciaTotal * 0.05;
+                }
+                _consumo = _potenciaTotal * 0.03;
+            } 
+        }
+        public EngineCombustionCar(int numCilindros,double volumePorCilindro,double potenciaPorCilindro)
         {
-            EngineType = TypesOfEngine.Comnbustion;
             this.numCilindros = numCilindros;
             this.volumePorCilindro = volumePorCilindro;
             this.potenciaPorCilindro = potenciaPorCilindro;
@@ -60,7 +59,7 @@ namespace FactoryAbstract.ConcreteProducts
                 {
                     rotacao -= 10;
                     Console.WriteLine($"Rotação do motor: {rotacao}: status: Ligado");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                 }
                 Console.WriteLine($"Rotação do motor: {rotacao} | status: Ligado | Potencia: {_potenciaTotal}\n Seleciona um aumento na rotação \n Digite close para desligar");
                 string upRotation = Console.ReadLine();
@@ -79,7 +78,7 @@ namespace FactoryAbstract.ConcreteProducts
         {
             throw new NotImplementedException();
         }
-        void Acelerar(double Rotacao)
+        public void Acelerar(double Rotacao)
         {
             if (rotacao != null)
             {
